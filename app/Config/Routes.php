@@ -33,6 +33,18 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+
+$routes->match(['get', 'post'], 'user/create', 'User::create');
+$routes->get('user/(:segment)', 'User::view/$1');
+$routes->get('user', 'User::index');
+//$routes->get('(:any)', 'Pages::view/$1');
+$routes->get('user/update/(:num)', 'User::edit/$1');
+$routes->get('user/view_user/(:num)', 'User::view/$1');
+
+
+$routes->get('/', 'Home::index');
+$routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -11,7 +11,7 @@ class User extends BaseController
     // Get all news items
 	public function index()
 	{
-    $model = model(UserModel::class);
+	$model = new UserModel();
 
     $data = [
         'user'  => $model->getUser(),
@@ -19,9 +19,7 @@ class User extends BaseController
     ];
 	
 	
-	/* $encode_data = json_encode($data);
-	echo $encode_data; */
-	
+		
 		
     echo view('templates/header', $data);
     echo view('user/overview', $data);
