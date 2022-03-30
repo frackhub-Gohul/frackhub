@@ -32,10 +32,10 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => '',
-        'password' => '',
-        'database' => '',
+        'hostname' => 'https://mi-linux.wlv.ac.uk/phpmyadmin/',
+        'username' => '2019330',
+        'password' => '29f04s',
+        'database' => 'db2019330',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
